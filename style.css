@@ -6,6 +6,6 @@ h1
 .Nav-bar{
     background-color: #a09cdf;
     height: 65px;
-    width: 100px;
-    margin-top: 0px;
+    width: 100%;
+    margin: 0 auto;
 }
