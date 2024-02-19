@@ -3,3 +3,9 @@ h1
     font-family: 'Times New Roman', Times, serif;
     font-size: 65px;
 }
+.Nav-bar{
+    background-color: #a09cdf;
+    height: 65px;
+    width: 100px;
+    margin-top: 0px;
+}
