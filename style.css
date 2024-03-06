@@ -3,16 +3,196 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+    color: #fff;
+    font-family: "Barlow Condensed", sans-serif;
 }
-h1
-{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 65px;
+html
+{scroll-behavior:smooth;}
+body{
+    background-color: #06141B;
 }
-.Nav-bar{
-    background-color: #a09cdf;
-    height: 65px;
+#home, #contacts, #skills, #education, #aboutme{
     width: 100%;
-    top: 0px;
-    position: sticky;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 80px;
+    background-color: #06141B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow Condensed", sans-serif;
+    position: fixed;
+}
+.mob{
+    display: none;
+    font-size: 65px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.5px;
+}
+nav ul li{
+    display: inline;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 480;
+}
+nav ul li a:hover{
+    color: #0181b0;
+}
+nav ul li a:focus{
+    color: white;
+}
+.content{
+    width: 80%;
+    height: 80vh;
+}
+.left{
+    width: 55%;
+    height: 100%;
+    float: left;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding-left: 35px;
+    padding-top: 13%;
+    font-family: 'Barlow Condensed', sans-serif; 
+}
+.right{
+    width: 45%;
+    height: 100%;
+    float: right;
+    background: url("20200807221711_IMG_0779.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+}
+.hello{
+    color: White;
+    font-size: 65px; 
+    font-weight: 480; 
+    display: block;
+    line-height: 70px;
+}
+.name{
+    font-family: 'Montserrat', sans-serif; 
+    color: #0181b0; 
+    font-weight: 700;
+    border-bottom: 10px solid white;
+    padding: -12px;
+    line-height: 25px;
+    font-size: 85px;
+    cursor: pointer;
+    
+}
+.name:hover{
+    color: white;
+    transition: 0.8s ease-in-out;
+    border-bottom: #0181b0 10px solid;
+}
+.des{
+    margin-top: 0px;
+    color: white;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 300;
+}
+button{
+    width: 180px;
+    height: 45px;
+    border-radius: 12px;
+    border: #fff 2px solid;
+    color: #fff;
+    background-color: transparent;
+    font-size: 25px;
+    margin-top: 7%;
+    cursor: pointer;
+}
+button:hover{
+    transition: 0.5s ease-out;
+    transform: scale(1.02);
+    border: #0181b0 2px solid;
+    color: #0181b0;
+}
+@media screen and (max-width:1450px) {
+    .hello{
+        font-size: 55px; 
+        font-weight: 480; 
+        display: block;
+        line-height: 55px;
+    }
+    .name{
+        border-bottom: 7px solid white;
+        line-height: 25px;
+        font-size: 65px;
+        cursor: pointer;
+        
+    }
+    .des{
+        font-size: 35px;
+        line-height: 25px;
+    }
+}
+@media screen and (max-width:800px)
+{
+    nav ul li{
+        display: none;
+    }
+    .mob{
+        display: inline;
+    }
+    #home{
+        background: url("20200807221711_IMG_0779.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .left{
+        width: 100%;
+        padding-top: 75%;
+        padding-left: 15px;
+    }
+    .right{
+        display:none;
+    }
+    .hello{
+        font-size: 30px; 
+        font-weight: 480; 
+        box-sizing: border-box;
+        line-height: 45px;
+    }
+    .name{
+        font-family: 'Montserrat', sans-serif; 
+        color: #0181b0; 
+        font-weight: 700;
+        border-bottom: 5px solid white;
+        font-size: 45px;
+        cursor: pointer;
+        line-height: 0px;
+    }
+    .name:hover{
+        color: white;
+        transition: 0.8s ease-in-out;
+        border-bottom: #0181b0 5px solid;
+    }
+    .des{
+        margin-top: 0px;
+        color: white;
+        font-size: 25px;
+        line-height: 45px;
+        font-weight: 300;
+    }
 }
