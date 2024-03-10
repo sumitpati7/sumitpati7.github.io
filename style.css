@@ -26,7 +26,7 @@ body {
   align-items: center;
 }
 header {
-  width: 100%;
+  width: 100vw;
   height: 80px;
   text-align: center;
   background-color: transparent;
@@ -171,7 +171,7 @@ button:hover {
 .breadcrumb li {
   list-style: none;
   display: inline;
-  font-size: 40px;
+  font-size: 3vw;
 }
 .breadcrumb li + li::before {
   content: " /";
@@ -227,9 +227,28 @@ td {
   padding: 0;
   border-bottom: 8px solid #0181b0;
 }
+@media screen and (max-width: 1380px) {
+  #aboutme .content .left {
+    width: 40%;
+  }
+  #aboutme .content .right {
+    width: 60%;
+  }
+  #aboutme .content .right .abtme .am {
+    font-size: 45px;
+  }
+  #aboutme .content .right .abtme p {
+    font-size: 2vw;
+  }
+  #aboutme .content .right .abtme button {
+    width: 125px;
+    font-size: 25px;
+  }
+}
+
 @media screen and (max-width: 1450px) {
   .hello {
-    font-size: 55px;
+    font-size: 45px;
     font-weight: 480;
     display: block;
     line-height: 55px;
@@ -237,7 +256,7 @@ td {
   .name {
     border-bottom: 7px solid white;
     line-height: 25px;
-    font-size: 65px;
+    font-size: 55px;
     cursor: pointer;
   }
   .des {
@@ -245,7 +264,7 @@ td {
     line-height: 25px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 980px) {
   nav ul li {
     display: none;
   }
@@ -256,13 +275,14 @@ td {
     background: url("img/20200807221711_IMG_0779.JPG");
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  .left {
     width: 100%;
-    padding-top: 75%;
+  }
+  #home .content .left {
+    width: 100%;
+    padding-top: 65%;
     padding-left: 15px;
   }
-  .right {
+  #home .content .right {
     display: none;
   }
   .hello {
@@ -291,5 +311,72 @@ td {
     font-size: 25px;
     line-height: 45px;
     font-weight: 300;
+  }
+  table,
+  th {
+    border: 1.5px solid #fff;
+    border-collapse: collapse;
+    background-color: #0181b0;
+    text-decoration: underline;
+    font-size: 15px;
+  }
+  th,
+  td {
+    height: 85px;
+  }
+  td {
+    background-color: #fff;
+    border: #0181b0 1.5px solid;
+    color: #4a5c6a;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+  }
+  #aboutme {
+    background-color: transparent;
+  }
+  #aboutme .content {
+    width: 100%;
+    margin-left: 5%;
+  }
+  #aboutme .content .left {
+    display: none;
+  }
+  #aboutme .content .right {
+    width: 100%;
+    border-left: solid 5px #0181b0;
+    padding-left: 5%;
+  }
+  .am {
+    font-size: 45px;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    border-bottom: 4px solid #0181b0;
+  }
+  #aboutme .content .right .abtme {
+    margin-left: 0px;
+    padding-left: 0;
+    width: 100%;
+    border: none;
+  }
+  #aboutme .content .right .abtme p {
+    margin-top: 15px;
+    font-size: 22px;
+    text-align: justify;
+    padding-right: 25px;
+  }
+  .edu {
+    font-size: 75px;
+  }
+  .breadcrumb li {
+    font-size: 25px;
+  }
+  #aboutme .content .right button {
+    width: 100px;
+    font-size: 25px;
+  }
+  .breadcrumb li + li::before {
+    font-size: 35px;
+    padding: 0px;
   }
 }
