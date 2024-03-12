@@ -36,7 +36,6 @@ header nav .mob {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,8 +131,8 @@ nav ul li a:focus {
   font-weight: 300;
 }
 button {
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 45px;
   border-radius: 12px;
   border: #ccc 2px solid;
   color: #ccc;
@@ -149,9 +148,12 @@ button:hover {
   color: #0181b0;
 }
 .am {
-  font-size: 95px;
+  font-size: 3.8vw;
   text-transform: uppercase;
   padding-bottom: 0px;
+}
+#aboutme .content {
+  padding-top: 25px;
 }
 .abtme {
   margin-left: 55px;
@@ -162,7 +164,7 @@ button:hover {
 }
 .abtme p {
   margin-top: 15px;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   text-align: justify;
 }
 #aboutme .content .left {
@@ -187,12 +189,12 @@ button:hover {
 .breadcrumb li {
   list-style: none;
   display: inline;
-  font-size: 3vw;
+  font-size: 35px;
 }
 .breadcrumb li + li::before {
   content: " /";
   color: #0181b0;
-  font-size: 45px;
+  font-size: 40px;
   padding: 15px;
 }
 #hire {
@@ -252,13 +254,14 @@ td {
   padding: 0;
 }
 #skills .content {
-  height: 90vh;
+  height: 85vh;
+  width: 90%;
 }
 #skills .content .top {
   height: 10%;
 }
 .skills-title {
-  font-size: 5vw;
+  font-size: 4vw;
   cursor: pointer;
 }
 .skills-title:hover {
@@ -266,13 +269,15 @@ td {
 }
 #skills .content .bottom {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 3fr);
   height: 90%;
+  padding: 10px;
+  width: 100%;
 }
 .item {
   height: 90%;
   border: #4a5c6a solid 2px;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   width: 95%;
 }
@@ -308,6 +313,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
 }
 #contacts .content .bottom .bottom-right {
   width: 80%;
@@ -321,19 +327,12 @@ td {
   padding: 5%;
   align-items: center;
 }
-
-#contacts ul li {
+#contacts .content .bottom .bottom-left ul li {
   text-decoration: none;
   list-style: none;
   font-size: 35px;
   padding-top: 10%;
   padding-bottom: 10%;
-}
-#contacts ul li a {
-  color: #0181b0;
-}
-#contacts ul li a:hover {
-  color: #4a5c6a !important;
 }
 #contacts .content .bottom .bottom-right .message {
   font-size: 3vw;
