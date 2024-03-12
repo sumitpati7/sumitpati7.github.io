@@ -254,7 +254,7 @@ td {
   padding: 0;
 }
 #skills .content {
-  height: 85vh;
+  height: 85%;
   width: 90%;
 }
 #skills .content .top {
@@ -552,7 +552,7 @@ td {
     font-size: 15px;
   }
   #skills .content {
-    height: 75vh;
+    height: 90%;
     width: 100%;
     padding: 10px;
   }
@@ -562,7 +562,7 @@ td {
     padding: 0;
   }
   .skills-title {
-    font-size: 55px;
+    font-size: 8vw;
   }
   .item {
     width: 45vw;
@@ -573,6 +573,10 @@ td {
   .item-top {
     display: flex;
     justify-content: center;
+  }
+  .item-top img {
+    width: 90px;
+    height: 90px;
   }
   .item .item-bottom {
     font-size: 25px;
@@ -644,5 +648,63 @@ td {
   }
   #contacts .content .bottom .bottom-left ul li:first-child {
     padding-left: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body main #home .content .left .name {
+    font-size: 40px;
+  }
+  #home .content .left .hello {
+    padding-top: 55%;
+  }
+  #aboutme .content .right .abtme p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  #aboutme .content .right .abtme button {
+    width: 110px;
+    font-size: 20px;
+  }
+  #aboutme .content .right .abtme .am {
+    font-size: 7vw;
+  }
+  .breadcrumb li {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .breadcrumb li + li::before {
+    font-size: 20px;
+  }
+  .item {
+    width: 44vw;
+    height: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .item .item-top img {
+    width: 85px;
+    height: 85px;
+  }
+  .item .item-bottom .title {
+    font-size: 42px;
+  }
+  #contacts .content .top {
+    font-size: 35px;
+  }
+  #contacts .content .bottom .bottom-left ul li a {
+    font-size: 27px;
+  }
+  #contacts .content .bottom .bottom-right .message {
+    font-size: 25px;
+  }
+  #contacts .content .bottom .bottom-right label {
+    font-size: 20px;
+  }
+  #contacts .content .bottom .bottom-right input,
+  #contacts .content .bottom .bottom-right #message {
+    font-size: 20px;
+  }
+  #contacts .content .bottom {
+    height: 98%;
   }
 }
