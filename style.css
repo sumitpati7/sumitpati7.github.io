@@ -19,6 +19,15 @@ header nav .mob {
 .mob:hover {
   color: #ccc;
 }
+.underline {
+  border-bottom: 8px solid #0181b0;
+  cursor: default;
+}
+.underline:hover {
+  border-bottom: 8px solid #ccc;
+  transition: 0.6s ease-in-out;
+  color: #0181b0;
+}
 #home,
 #contacts,
 #skills,
@@ -27,7 +36,6 @@ header nav .mob {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
-  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,16 +112,16 @@ nav ul li a:focus {
   font-family: "Montserrat", sans-serif;
   color: #0181b0;
   font-weight: 700;
-  border-bottom: 10px solid #ccc;
-  padding: -12px;
+  padding-bottom: 0;
   line-height: 25px;
   font-size: 85px;
   cursor: pointer;
+  border-bottom: 8px solid #ccc;
 }
 .name:hover {
   color: #ccc;
-  transition: 0.8s ease-in-out;
-  border-bottom: #0181b0 10px solid;
+  border-bottom: 8px solid #0181b0;
+  transition: 0.6s ease-in-out;
 }
 .des {
   margin-top: 0px;
@@ -123,8 +131,8 @@ nav ul li a:focus {
   font-weight: 300;
 }
 button {
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 45px;
   border-radius: 12px;
   border: #ccc 2px solid;
   color: #ccc;
@@ -140,10 +148,12 @@ button:hover {
   color: #0181b0;
 }
 .am {
-  font-size: 95px;
+  font-size: 3.8vw;
   text-transform: uppercase;
   padding-bottom: 0px;
-  border-bottom: 8px solid #0181b0;
+}
+#aboutme .content {
+  padding-top: 25px;
 }
 .abtme {
   margin-left: 55px;
@@ -154,7 +164,7 @@ button:hover {
 }
 .abtme p {
   margin-top: 15px;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   text-align: justify;
 }
 #aboutme .content .left {
@@ -179,12 +189,12 @@ button:hover {
 .breadcrumb li {
   list-style: none;
   display: inline;
-  font-size: 3vw;
+  font-size: 35px;
 }
 .breadcrumb li + li::before {
   content: " /";
   color: #0181b0;
-  font-size: 45px;
+  font-size: 40px;
   padding: 15px;
 }
 #hire {
@@ -242,33 +252,32 @@ td {
   font-size: 95px;
   text-transform: uppercase;
   padding: 0;
-  border-bottom: 8px solid #0181b0;
 }
 #skills .content {
-  height: 90vh;
+  height: 85%;
+  width: 90%;
 }
 #skills .content .top {
   height: 10%;
 }
 .skills-title {
-  font-size: 5vw;
-  border-bottom: #0181b0 8px solid;
-  transition: 0.8s ease-in-out;
+  font-size: 4vw;
   cursor: pointer;
 }
 .skills-title:hover {
-  border-bottom: #ccc 8px solid;
   color: #0181b0;
 }
 #skills .content .bottom {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 3fr);
   height: 90%;
+  padding: 10px;
+  width: 100%;
 }
 .item {
   height: 90%;
   border: #4a5c6a solid 2px;
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
   width: 95%;
 }
@@ -283,9 +292,103 @@ td {
   font-size: 45px;
 }
 .item:hover {
-  border: 2px dotted #ccc;
+  border: 2px solid #ccc;
 }
-
+#contacts .content {
+  padding: 0;
+}
+#contacts .content .top {
+  font-size: 5vw;
+}
+#contacts .content .bottom {
+  padding: 0;
+  padding-top: 10px;
+}
+#contacts .content .bottom .bottom-left {
+  width: 20%;
+  float: left;
+  border: 2px solid #4a5c6a;
+  border-radius: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+#contacts .content .bottom .bottom-right {
+  width: 80%;
+  float: right;
+  height: 90%;
+  border: #4a5c6a solid 2px;
+  border-left: none;
+  border-radius: 5%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 5%;
+  align-items: center;
+}
+#contacts .content .bottom .bottom-left ul li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 35px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#contacts .content .bottom .bottom-right .message {
+  font-size: 3vw;
+  color: #0181b0;
+}
+#contacts .content .bottom .bottom-right label {
+  font-size: 1.5vw;
+}
+.inputbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.input-box:first-child {
+  margin-right: 10px;
+}
+.input-box:last-child {
+  margin-left: 10px;
+}
+#contacts .content .bottom .bottom-right input {
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: #4a5c6a 2px solid;
+  outline: none;
+  border-radius: 5px;
+  color: #ccc;
+  padding: 5px;
+  font-size: 25px;
+}
+#contacts .content .bottom .bottom-right input:focus {
+  border: none;
+  border: #0181b0 solid 2px;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+}
+#contacts .content .bottom .bottom-right form textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 20vh;
+  border: #4a5c6a solid 2px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 25px;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+#contacts .content .bottom .bottom-right form textarea:focus {
+  border: none;
+  border: #0181b0 solid 2px;
+  background-color: transparent;
+  transition: 0.2s ease-in-out;
+}
+#contacts .content .bottom .bottom-right input[type="submit"]:hover {
+  background-color: #0181b0;
+  border: #ccc 2px solid;
+}
 @media screen and (max-width: 1380px) {
   #aboutme .content .left {
     width: 40%;
@@ -301,9 +404,6 @@ td {
   }
   #aboutme .content .right .abtme button {
     width: 125px;
-    .item {
-      width: 100%;
-    }
     font-size: 25px;
   }
   .am {
@@ -452,14 +552,17 @@ td {
     font-size: 15px;
   }
   #skills .content {
-    height: 75vh;
+    height: 90%;
+    width: 100%;
+    padding: 10px;
   }
   #skills .content .bottom {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
+    padding: 0;
   }
   .skills-title {
-    font-size: 55px;
+    font-size: 8vw;
   }
   .item {
     width: 45vw;
@@ -467,10 +570,13 @@ td {
     padding: 10px;
     margin: 10px;
   }
-
   .item-top {
     display: flex;
     justify-content: center;
+  }
+  .item-top img {
+    width: 90px;
+    height: 90px;
   }
   .item .item-bottom {
     font-size: 25px;
@@ -478,5 +584,127 @@ td {
   }
   .item .item-bottom .description {
     display: none;
+  }
+  .underline {
+    border-bottom: 4px solid #0181b0;
+  }
+  .underline:hover {
+    border-bottom: 4px solid #ccc;
+  }
+  #contacts .content .bottom .bottom-left {
+    height: 10%;
+    width: 100%;
+    border: none;
+    border-bottom: #4a5c6a solid 2px;
+    border-radius: 0;
+  }
+  #contacts .content .top {
+    font-size: 45px;
+    height: 10%;
+  }
+  #contacts .content .bottom {
+    height: 90%;
+    padding: 0;
+    display: block;
+    margin: 0;
+    border: #4a5c6a solid 2px;
+    border-radius: 12px;
+  }
+  .details {
+    display: none;
+    left: -200px;
+  }
+  #contacts .content .bottom .bottom-right {
+    border: none;
+    height: 90%;
+    width: 100%;
+    padding: 10px;
+  }
+  #contacts .content .bottom .bottom-right .message {
+    font-size: 38px;
+  }
+  #contacts .content .bottom .bottom-right label {
+    font-size: 25px;
+  }
+  #contacts .content .bottom .bottom-right .inputbox {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #contacts .content .bottom .bottom-right .inputbox .input-box:first-child {
+    margin-right: 0;
+  }
+  #contacts .content .bottom .bottom-right .inputbox .input-box:last-child {
+    margin-left: 0;
+  }
+  #contacts .content .bottom .bottom-right form textarea {
+    height: 26vh;
+  }
+  #contacts .content .bottom .bottom-left ul li {
+    display: inline;
+    font-size: 35px;
+    padding: 0;
+    text-align: center;
+    padding-left: 25px;
+  }
+  #contacts .content .bottom .bottom-left ul li:first-child {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 400px) {
+  body main #home .content .left .name {
+    font-size: 40px;
+  }
+  #home .content .left .hello {
+    padding-top: 55%;
+  }
+  #aboutme .content .right .abtme p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  #aboutme .content .right .abtme button {
+    width: 110px;
+    font-size: 20px;
+  }
+  #aboutme .content .right .abtme .am {
+    font-size: 7vw;
+  }
+  .breadcrumb li {
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .breadcrumb li + li::before {
+    font-size: 20px;
+  }
+  .item {
+    width: 44vw;
+    height: 90%;
+    padding: 0px;
+    margin: 0px;
+  }
+  .item .item-top img {
+    width: 85px;
+    height: 85px;
+  }
+  .item .item-bottom .title {
+    font-size: 42px;
+  }
+  #contacts .content .top {
+    font-size: 35px;
+  }
+  #contacts .content .bottom .bottom-left ul li a {
+    font-size: 27px;
+  }
+  #contacts .content .bottom .bottom-right .message {
+    font-size: 25px;
+  }
+  #contacts .content .bottom .bottom-right label {
+    font-size: 20px;
+  }
+  #contacts .content .bottom .bottom-right input,
+  #contacts .content .bottom .bottom-right #message {
+    font-size: 20px;
+  }
+  #contacts .content .bottom {
+    height: 98%;
   }
 }
