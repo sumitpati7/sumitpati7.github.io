@@ -5,6 +5,13 @@
 
 .navbar-brand {
   font-size: 40px;
+  color: #ccc;
+  transition: 0.5s all ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #4a5c6a;
+  transition: 0.5s all ease-in-out;
 }
 
 .nav-item {
@@ -12,8 +19,8 @@
   color: #ccc !important;
 }
 
-.nav-item a {
-  color: #ccc !important;
+.nav-link {
+  color: #ccc;
   text-transform: uppercase;
 }
 
@@ -48,6 +55,10 @@
   background-color: transparent;
   border: none;
   transition: all 0.5s ease-in-out;
+}
+
+.nav-item .activated {
+  color: #06141b;
 }
 
 @media screen and (max-width: 1084px) {
