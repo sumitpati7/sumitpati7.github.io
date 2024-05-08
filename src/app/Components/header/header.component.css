@@ -3,6 +3,10 @@
   background-color: #0181b0 !important;
 }
 
+.offcanvas {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 .navbar-brand {
   font-size: 40px;
   color: #ccc;

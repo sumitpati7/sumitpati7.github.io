@@ -1,0 +1,113 @@
+* {
+  color: #ccc;
+}
+
+.main-container {
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.main-container .container-fluid {
+  display: grid;
+  height: 90vh;
+  width: 100%;
+}
+
+.main-container .container-fluid .row {
+  height: 80vh;
+}
+
+.main-container .container-fluid .right {
+  /* float: right; */
+  height: 100%;
+  background: url("../../../assets/image/20200807221711_IMG_0779.JPG") no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.main-container .container-fluid .left {
+  /* float: left; */
+  height: 100%;
+  font-size: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+.main-container .container-fluid .left .text {
+  font-weight: 500;
+}
+
+.main-container .container-fluid .left .intro {
+  font-size: 75px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container .container-fluid .left .intro .name {
+  font-weight: 500;
+  color: #0181b0;
+  border-bottom: #ccc 5px solid;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.main-container .container-fluid .left .intro .name:hover {
+  color: #ccc;
+  border-bottom: #0181b0 5px solid;
+}
+
+.main-container .container-fluid .left .text .job {
+  font-weight: 100;
+}
+
+.main-container .container-fluid .left .buttons {
+  display: flex;
+  gap: 45px;
+}
+
+.main-container .container-fluid .left .buttons button {
+  font-size: 25px;
+  border-radius: 15px;
+  background-color: #0181b0;
+  padding: 15px 10px;
+  border: none;
+  width: 40%;
+  display: inline;
+}
+
+.main-container .container-fluid .left .buttons button:hover {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #0181b0;
+}
+
+@media screen and (max-width: 1084px) {
+  .main-container .container-fluid .right {
+    display: none;
+    width: 0;
+  }
+  .main-container .container-fluid .left {
+    width: 100%;
+    background-image: url("../../../assets/image/20200807221711_IMG_0779.JPG");
+    background-size: cover;
+    justify-content: end;
+    font-size: 25px;
+    border-radius: 25px;
+  }
+  .main-container .container-fluid .left .text .intro {
+    font-size: 40px;
+  }
+  .main-container .container-fluid .left .buttons button {
+    font-size: 16px;
+    padding: 5px;
+    height: 45px;
+  }
+  .main-container .container-fluid .row {
+    height: 85vh;
+  }
+}
