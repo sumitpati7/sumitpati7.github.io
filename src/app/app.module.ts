@@ -10,6 +10,7 @@ import { SkillsComponent } from './Components/skills/skills.component';
 import { Routes, RouterModule, provideRouter } from '@angular/router';
 import { routes } from './routes';
 import { HeadersDirective } from './Directives/Headers/headers.directive';
+import { ContactsComponent } from './Components/contacts/contacts.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeadersDirective } from './Directives/Headers/headers.directive';
     HomeComponent,
     SkillsComponent,
     HeadersDirective,
+    ContactsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [provideRouter(routes)],

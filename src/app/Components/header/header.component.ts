@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Routes } from '@angular/router';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +7,7 @@ import { Routes } from '@angular/router';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  constructor(private routes: Router) {}
   flag = false;
   notFunc() {
     console.log(this.flag);

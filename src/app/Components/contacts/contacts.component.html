@@ -1,0 +1,67 @@
+<div class="container-fluid main" id="main">
+  <div class="container">
+    <div Headers>Contact Me</div>
+    <div class="forms" id="forms">
+      <div class="details">
+        <div class="items" *ngFor="let items of contacts">
+          <a [href]="items.link">
+            <i [class]="items.logo"></i> <span>{{ items.name }}</span></a
+          >
+        </div>
+      </div>
+      <div class="bottom">
+        <ng-container *ngIf="!isSubmit">
+          <form onsubmit="return false" class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <label for="name">Name:</label><br />
+                <input
+                  type="text"
+                  placeholder="Enter your Name?"
+                  required
+                  #inputName
+                />
+              </div>
+              <div class="col-12 col-lg-6">
+                <label for="email">Email:</label><br />
+                <input
+                  type="email"
+                  placeholder="Enter your Email?"
+                  required
+                  #inputEmail
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-12">
+                <label for="message">Message:</label><br />
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message for me?"
+                  #inputMess
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 submit">
+                <button
+                  type="submit"
+                  (click)="
+                    submit(inputName.value, inputEmail.value, inputMess.value)
+                  "
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </ng-container>
+        <ng-container *ngIf="isSubmit">
+          <div class="display-message">Form Submit SuccessFul</div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
