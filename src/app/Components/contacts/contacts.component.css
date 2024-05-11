@@ -45,6 +45,7 @@ label {
   padding: 25px;
   height: 70vh;
   transition: 1.2s all ease;
+  box-shadow: #444 2px 2px 30px;
 }
 
 input,

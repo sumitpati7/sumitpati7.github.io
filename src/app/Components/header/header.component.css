@@ -62,7 +62,8 @@
 }
 
 .nav-item .activated {
-  color: #06141b;
+  color: #06141b !important;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1084px) {

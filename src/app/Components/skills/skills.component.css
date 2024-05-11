@@ -27,6 +27,7 @@ h1 {
   width: 30%;
   color: #ccc;
   transition: 0.18s all linear;
+  box-shadow: #333 2px 2px 30px;
 }
 
 .item .item-top img {
@@ -49,7 +50,7 @@ h1 {
   transform: scale(1.03);
   background-color: rgba(0, 0, 0, 2);
   color: #fff;
-  box-shadow: #ccc 1px 2px 20px;
+  box-shadow: #aaa 2px 2px 20px;
 }
 
 .item .item-bottom .description {

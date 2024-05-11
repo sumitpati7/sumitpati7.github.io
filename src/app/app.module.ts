@@ -23,7 +23,7 @@ import { ContactsComponent } from './Components/contacts/contacts.component';
     ContactsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
-  providers: [provideRouter(routes)],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
