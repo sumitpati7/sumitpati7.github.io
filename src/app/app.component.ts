@@ -1,5 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { Router, Event, NavigationStart, NavigationEnd } from '@angular/router';
+import {
+  Router,
+  Event,
+  NavigationStart,
+  NavigationEnd,
+  NavigationCancel,
+  NavigationError,
+} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +23,11 @@ export class AppComponent {
       if (event instanceof NavigationStart) {
         this.showLoader = true;
       }
-      if (event instanceof NavigationEnd) {
+      if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
         this.showLoader = false;
       }
     });
