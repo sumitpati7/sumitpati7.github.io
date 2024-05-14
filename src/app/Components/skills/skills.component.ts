@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { item_details } from './item_details';
+import { Component, inject } from '@angular/core';
+import { Item } from './itemClass';
+import { ItemService } from '../../Service/item_details.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-skills',
@@ -7,8 +9,10 @@ import { item_details } from './item_details';
   styleUrl: './skills.component.css',
 })
 export class SkillsComponent {
-  imported_array = item_details;
+  imported_array: Item[] = [];
+  allItem: ItemService = inject(ItemService);
+  constructor(private routed: ActivatedRoute) {}
   ngOnInit() {
-    this.imported_array.sort((a, b) => a.title.localeCompare(b.title));
+    this.imported_array = this.routed.snapshot.data['items'];
   }
 }
