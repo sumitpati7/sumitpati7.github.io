@@ -24,14 +24,24 @@
                   placeholder="Enter your Name?"
                   formControlName="name"
                 />
+                <br />
+                <div class="error" *ngIf="nameError">
+                  *Name cannot be empty!
+                </div>
               </div>
               <div class="col-12 col-lg-6">
-                <label for="email">Email:</label><br />
+                <label for="email">Email:</label>
                 <input
                   type="email"
                   placeholder="Enter your Email?"
                   formControlName="email"
                 />
+                <div class="error" *ngIf="emailRequired">
+                  *Email cannot be empty!
+                </div>
+                <div class="error" *ngIf="emailPattern">
+                  *Invalid email entered. Please re-enter!
+                </div>
               </div>
             </div>
             <div class="row textarea-row">
@@ -43,6 +53,9 @@
                   placeholder="Enter your message for me?"
                   formControlName="message"
                 ></textarea>
+                <div class="error" *ngIf="nameError">
+                  *Please leave some message!
+                </div>
               </div>
             </div>
             <div class="row">
