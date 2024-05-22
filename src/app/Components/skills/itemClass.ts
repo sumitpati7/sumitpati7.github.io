@@ -5,7 +5,8 @@ export class Item {
   constructor(
     public title: string,
     public img_url: string,
-    public desc: string
+    public desc: string,
+    public id?: string
   ) {}
 }
 

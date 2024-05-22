@@ -11,6 +11,8 @@ import { Routes, RouterModule, provideRouter } from '@angular/router';
 import { routes } from './routes';
 import { HeadersDirective } from './Directives/Headers/headers.directive';
 import { ContactsComponent } from './Components/contacts/contacts.component';
+import { AddSkillComponent } from './Components/add-skill/add-skill.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,14 @@ import { ContactsComponent } from './Components/contacts/contacts.component';
     SkillsComponent,
     HeadersDirective,
     ContactsComponent,
+    AddSkillComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
