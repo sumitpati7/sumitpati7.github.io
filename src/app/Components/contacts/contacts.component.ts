@@ -1,12 +1,7 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ContactsFormService } from '../../Service/contacts-form.service';
+import { ContactsSubmitService } from '../../Service/contacts-submit.service';
 
 @Component({
   selector: 'app-contacts',
@@ -14,10 +9,9 @@ import { ContactsFormService } from '../../Service/contacts-form.service';
   styleUrl: './contacts.component.css',
 })
 export class ContactsComponent {
-  form: FormBuilder = inject(FormBuilder);
-  pushInfo: ContactsFormService = inject(ContactsFormService);
-  contactsForm!: FormGroup;
   isSubmit: boolean = false;
+  form!: FormGroup;
+  pushService = inject(ContactsSubmitService);
   constructor(private router: Router) {}
   contacts = [
     {
@@ -38,7 +32,7 @@ export class ContactsComponent {
   ];
   ngOnInit() {
     this.isSubmit = false;
-    this.contactsForm = this.form.group({
+    this.form = new FormGroup({
       name: new FormControl(null, Validators.required),
       email: new FormControl(null, [Validators.required, Validators.email]),
       message: new FormControl(null, Validators.required),
@@ -46,8 +40,11 @@ export class ContactsComponent {
   }
 
   submit() {
-    this.pushInfo.pushContactInfo(this.contactsForm.value);
-    alert('Message has been submitted!');
-    this.contactsForm.reset();
+    this.isSubmit = true;
+    this.pushService.pushContacts(this.form.value).subscribe((response) => {
+      setTimeout(() => {
+        this.isSubmit = false;
+      }, 3000);
+    });
   }
 }

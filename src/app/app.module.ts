@@ -15,7 +15,6 @@ import { AddSkillComponent } from './Components/add-skill/add-skill.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ProjectsComponent } from './Components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { ProjectsComponent } from './Components/projects/projects.component';
     HeadersDirective,
     ContactsComponent,
     AddSkillComponent,
-    ProjectsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,8 +33,8 @@ import { ProjectsComponent } from './Components/projects/projects.component';
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
-    CommonModule,
     ReactiveFormsModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

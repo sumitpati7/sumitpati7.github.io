@@ -21,6 +21,5 @@ export const routes: Routes = [
       import('./Components/add-skill/add-skill.module').then((c) => {
         return c.AddSkillModule;
       }),
-    // component: AddSkillComponent,
   },
 ];
