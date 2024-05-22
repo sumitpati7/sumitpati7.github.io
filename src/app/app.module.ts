@@ -13,6 +13,8 @@ import { HeadersDirective } from './Directives/Headers/headers.directive';
 import { ContactsComponent } from './Components/contacts/contacts.component';
 import { AddSkillComponent } from './Components/add-skill/add-skill.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule,
+    CommonModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

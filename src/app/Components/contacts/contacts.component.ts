@@ -1,5 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
+import { ContactsFormService } from '../../Service/contacts-form.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,6 +14,9 @@ import { Router } from '@angular/router';
   styleUrl: './contacts.component.css',
 })
 export class ContactsComponent {
+  form: FormBuilder = inject(FormBuilder);
+  pushInfo: ContactsFormService = inject(ContactsFormService);
+  contactsForm!: FormGroup;
   isSubmit: boolean = false;
   constructor(private router: Router) {}
   contacts = [
@@ -28,29 +38,16 @@ export class ContactsComponent {
   ];
   ngOnInit() {
     this.isSubmit = false;
+    this.contactsForm = this.form.group({
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      message: new FormControl(null, Validators.required),
+    });
   }
 
-  submit(name: string, email: string, mess: string) {
-    if (name === '' || name === null) {
-      alert('Name not submitted!');
-      return;
-    }
-    if (email === '' || email === null) {
-      alert('Email not submitted!');
-      return;
-    }
-    this.isSubmit = true;
-    const box = document.getElementById('forms');
-    if (box != null) {
-      box.style.height = '200px';
-    }
-
-    const main = document.getElementById('main');
-    if (main != null) {
-      main.style.height = '93dvh';
-      main.style.display = 'flex';
-      main.style.alignItems = 'center';
-    }
-    console.log({ name });
+  submit() {
+    this.pushInfo.pushContactInfo(this.contactsForm.value);
+    alert('Message has been submitted!');
+    this.contactsForm.reset();
   }
 }
