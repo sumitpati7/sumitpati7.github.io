@@ -82,7 +82,6 @@
     justify-content: center;
   }
   .nav-item a {
-    color: #0181b0 !important;
     text-transform: capitalize;
   }
 }

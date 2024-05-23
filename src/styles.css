@@ -1,3 +1,8 @@
 body {
-  background-color: #06141b;
+    background-color: #06141b;
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
 }

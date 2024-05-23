@@ -14,5 +14,6 @@ export class SkillsComponent {
   constructor(private routed: ActivatedRoute) {}
   ngOnInit() {
     this.imported_array = this.routed.snapshot.data['items'];
+    this.imported_array.sort((a, b) => a.title.localeCompare(b.title));
   }
 }

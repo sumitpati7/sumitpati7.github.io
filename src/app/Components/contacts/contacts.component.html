@@ -11,25 +11,37 @@
       </div>
       <div class="bottom">
         <ng-container *ngIf="!isSubmit">
-          <form onsubmit="return false" class="container-fluid">
+          <form
+            class="container-fluid"
+            (ngSubmit)="submit()"
+            [formGroup]="form"
+          >
             <div class="row">
               <div class="col-12 col-lg-6">
                 <label for="name">Name:</label><br />
                 <input
                   type="text"
                   placeholder="Enter your Name?"
-                  required
-                  #inputName
+                  formControlName="name"
                 />
+                <br />
+                <div class="error" *ngIf="nameError">
+                  *Name cannot be empty!
+                </div>
               </div>
               <div class="col-12 col-lg-6">
-                <label for="email">Email:</label><br />
+                <label for="email">Email:</label>
                 <input
                   type="email"
                   placeholder="Enter your Email?"
-                  required
-                  #inputEmail
+                  formControlName="email"
                 />
+                <div class="error" *ngIf="emailRequired">
+                  *Email cannot be empty!
+                </div>
+                <div class="error" *ngIf="emailPattern">
+                  *Invalid email entered. Please re-enter!
+                </div>
               </div>
             </div>
             <div class="row textarea-row">
@@ -39,20 +51,16 @@
                   name="message"
                   id="message"
                   placeholder="Enter your message for me?"
-                  #inputMess
+                  formControlName="message"
                 ></textarea>
+                <div class="error" *ngIf="nameError">
+                  *Please leave some message!
+                </div>
               </div>
             </div>
             <div class="row">
               <div class="col-12 submit">
-                <button
-                  type="submit"
-                  (click)="
-                    submit(inputName.value, inputEmail.value, inputMess.value)
-                  "
-                >
-                  Submit
-                </button>
+                <button type="submit">Submit</button>
               </div>
             </div>
           </form>

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ContactsSubmitService } from '../../Service/contacts-submit.service';
 
 @Component({
   selector: 'app-contacts',
@@ -8,6 +10,12 @@ import { Router } from '@angular/router';
 })
 export class ContactsComponent {
   isSubmit: boolean = false;
+  form!: FormGroup;
+  pushService = inject(ContactsSubmitService);
+  nameError: boolean = false;
+  emailRequired: boolean = false;
+  emailPattern: boolean = false;
+  messageError: boolean = false;
   constructor(private router: Router) {}
   contacts = [
     {
@@ -28,29 +36,43 @@ export class ContactsComponent {
   ];
   ngOnInit() {
     this.isSubmit = false;
+    this.form = new FormGroup({
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      message: new FormControl(null, Validators.required),
+    });
   }
 
-  submit(name: string, email: string, mess: string) {
-    if (name === '' || name === null) {
-      alert('Name not submitted!');
-      return;
+  submit() {
+    if (this.form.valid) {
+      this.isSubmit = true;
+      this.pushService.pushContacts(this.form.value).subscribe((response) => {
+        setTimeout(() => {
+          this.form.reset();
+          this.isSubmit = false;
+        }, 3000);
+      });
+    } else {
+      if (this.form.get('name')?.invalid) {
+        this.nameError = true;
+      }
+      if (this.form.get('email')?.invalid) {
+        if (this.form.get('email')?.errors?.['required']) {
+          this.emailRequired = true;
+        } else {
+          this.emailPattern = true;
+        }
+      }
+      if (this.form.get('message')?.invalid) {
+        this.messageError = true;
+      }
+      setTimeout(() => {
+        this.nameError =
+          this.emailRequired =
+          this.emailPattern =
+          this.messageError =
+            false;
+      }, 3000);
     }
-    if (email === '' || email === null) {
-      alert('Email not submitted!');
-      return;
-    }
-    this.isSubmit = true;
-    const box = document.getElementById('forms');
-    if (box != null) {
-      box.style.height = '200px';
-    }
-
-    const main = document.getElementById('main');
-    if (main != null) {
-      main.style.height = '93dvh';
-      main.style.display = 'flex';
-      main.style.alignItems = 'center';
-    }
-    console.log({ name });
   }
 }
