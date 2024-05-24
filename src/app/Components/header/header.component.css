@@ -1,87 +1,91 @@
 .navbar {
-  height: 75px;
-  background-color: #0181b0 !important;
+    height: 75px;
+    background-color: var(--blue-color) !important;
 }
 
 .offcanvas {
-  background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .navbar-brand {
-  font-size: 40px;
-  color: #ccc;
-  transition: 0.5s all ease-in-out;
+    font-size: 40px;
+    color: #ccc;
+    transition: 0.5s all ease-in-out;
 }
 
 .navbar-brand:hover {
-  color: #4a5c6a;
-  transition: 0.5s all ease-in-out;
+    color: #4a5c6a;
+    transition: 0.5s all ease-in-out;
 }
 
 .nav-item {
-  font-size: 30px;
-  color: #ccc !important;
+    font-size: 30px;
+    color: #ccc !important;
 }
 
 .nav-link {
-  color: #ccc;
-  text-transform: uppercase;
+    color: #ccc;
+    text-transform: uppercase;
 }
 
 .nav-item a:hover {
-  color: #4a5c6a !important;
+    color: #4a5c6a !important;
 }
+
 
 /*4a5c6a*/
 
 .navbar-nav {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .right {
-  width: 20%;
-  display: flex;
-  justify-content: center;
+    width: 20%;
+    display: flex;
+    justify-content: center;
 }
 
 .left {
-  width: 20%;
-  display: flex;
-  justify-content: center;
+    width: 20%;
+    display: flex;
+    justify-content: center;
 }
 
 .controls {
-  font-size: 30px;
-  /* color: #fff; */
-  cursor: pointer;
-  line-height: 65px;
-  background-color: transparent;
-  border: none;
-  transition: all 0.5s ease-in-out;
+    font-size: 30px;
+    /* color: #fff; */
+    cursor: pointer;
+    line-height: 65px;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease-in-out;
 }
 
 .nav-item .activated {
-  color: #06141b !important;
-  font-weight: 500;
+    color: #06141b !important;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 1084px) {
-  .left {
-    width: auto;
-  }
-  .nav-link {
-    text-align: center;
-  }
-  h5 .navbar-brand {
-    color: #0181b0;
-  }
-  .right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  .nav-item a {
-    text-transform: capitalize;
-  }
+    .left {
+        width: auto;
+    }
+    .nav-link {
+        text-align: center;
+    }
+    h5 .navbar-brand {
+        color: var(--blue-color);
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-item a {
+        text-transform: capitalize;
+    }
+    .nav-item .activated {
+        color: var(--blue-color) !important;
+    }
 }
