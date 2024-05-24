@@ -8,5 +8,10 @@ import { Item } from '../Components/skills/itemClass';
 export class PushSkillService {
   constructor(private http: HttpClient) {}
 
-  pushSkill() {}
+  pushSkill(data: Item) {
+    return this.http.post(
+      'https://sumitpati7-83579-default-rtdb.firebaseio.com/courses.json',
+      data
+    );
+  }
 }

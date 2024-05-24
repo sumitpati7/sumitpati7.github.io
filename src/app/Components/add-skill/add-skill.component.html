@@ -1,38 +1,42 @@
 <div class="view-area">
-  <form class="form">
-    <h1 Headers>Add Skills</h1>
-    <div class="input-box">
-      <label for="sName">Skill Name:</label> <br />
-      <input
-        type="text"
-        id="sName"
-        name="sName"
-        title="Skill Name"
-        autocomplete="off"
-      />
+    <ng-container *ngIf="error">
+        <div class="errorMessage">
+            Error! <br /> {{ errorMessage }}
+        </div>
+    </ng-container>
+    <ng-container *ngIf="submit">
+        <div class="errorMessage">Form Submitted Successfully!</div>
+    </ng-container>
+    <div class="formArea">
+        <form class="form" [formGroup]="form" (ngSubmit)="formSubmit()">
+            <h1 Headers>Add Skills</h1>
+            <div class="input-box">
+                <label for="sName">Skill Name:</label> <br />
+                <input type="text" id="sName" name="sName" formControlName="title" title="Skill Name" autocomplete="off" />
+                <ng-container *ngIf="form.get('sName')?.invalid && form.get('sName')?.touched">
+                    <div class="error">*This field is required!</div>
+                </ng-container>
+            </div>
+            <div class="input-box">
+                <label for="sImg">Image Name:</label> <br />
+                <input type="text" id="sImg" name="sImg" title="Skill Image" formControlName="img_url" autocomplete="off" />
+                <ng-container *ngIf="form.get('sImg')?.invalid && form.get('sImg')?.touched">
+                    <div class="error">*This field is required!</div>
+                </ng-container>
+            </div>
+            <div class="input-box">
+                <label for="sDescription">Skill Description:</label> <br />
+                <textarea name="sDescription" id="sDescription" cols="36" rows="10" formControlName="desc" title="Skill Description"></textarea>
+                <ng-container *ngIf="form.get('sDesc')?.invalid && form.get('sDesc')?.touched">
+                    <div class="error">*This field is required!</div>
+                </ng-container>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="overlay" *ngIf="loading">
+            <div class="loader"></div>
+        </div>
     </div>
-    <div class="input-box">
-      <label for="sImg">Image Name:</label> <br />
-      <input
-        type="text"
-        id="sImg"
-        name="sImg"
-        title="Skill Image"
-        autocomplete="off"
-      />
-    </div>
-    <div class="input-box">
-      <label for="sDescription">Skill Description:</label> <br />
-      <textarea
-        name="sDescription"
-        id="sDescription"
-        cols="36"
-        rows="10"
-        title="Skill Description"
-      ></textarea>
-    </div>
-    <div class="submit-button">
-      <button type="button">Submit</button>
-    </div>
-  </form>
 </div>
