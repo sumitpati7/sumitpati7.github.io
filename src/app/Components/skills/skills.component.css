@@ -1,6 +1,6 @@
-/* .container-fluid {
-    height: 92vh;
-} */
+.container-fluid {
+    margin-top: 85px;
+}
 
 h1 {
     max-width: min-content;
@@ -13,7 +13,7 @@ h1 {
 }
 
 .item {
-    height: 450px;
+    height: auto;
     border: #4a5c6a solid 2px;
     margin: 10px;
     padding: 10px;
@@ -34,12 +34,12 @@ h1 {
 
 .item .item-bottom .title {
     font-size: 45px;
-    color: #0181b0;
+    color: var(--blue-color);
     font-family: "Roboto Condensed", sans-serif;
 }
 
 .item:hover {
-    border: 4px solid #0181b0;
+    border: 4px solid var(--blue-color);
     transform: scale(1.03);
     background-color: rgba(0, 0, 0, 2);
     color: #fff;
@@ -51,7 +51,16 @@ h1 {
     font-size: 22px;
 }
 
+@media screen and (max-width: 1399px) {
+    .item .item-bottom .description {
+        font-size: 20px;
+    }
+}
+
 @media screen and (max-width: 1084px) {
+    .container-fluid {
+        margin-top: 25px;
+    }
     .item {
         width: 43%;
         height: 90%;
