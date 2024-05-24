@@ -7,6 +7,7 @@ import {
   NavigationCancel,
   NavigationError,
 } from '@angular/router';
+import { ItemService } from './Service/item_details.service';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent {
   title = 'sumitpati7';
   router = inject(Router);
   showLoader: Boolean = false;
+  item_details = inject(ItemService);
 
   ngOnInit() {
     this.router.events.subscribe((event: Event) => {

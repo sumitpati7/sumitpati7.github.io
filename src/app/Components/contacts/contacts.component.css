@@ -1,151 +1,169 @@
 .main {
-  margin-top: 70px;
+    margin-top: 70px;
 }
 
 .details {
-  display: flex;
-  justify-content: space-between;
-  margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
 }
 
 label {
-  color: #ccc;
+    color: #ccc;
 }
 
 .details .items {
-  display: inline-block;
-  font-size: 25px;
-  text-align: center;
+    display: inline-block;
+    font-size: 25px;
+    text-align: center;
 }
 
 .details .items a {
-  text-decoration: none;
-  color: #ccc;
-  /* padding-left: 20px; */
+    text-decoration: none;
+    color: #ccc;
+    /* padding-left: 20px; */
 }
 
 .details .items a:first-child {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .details .items a:last-child {
-  padding-right: 20px;
+    padding-right: 20px;
 }
 
 .details .items a i {
-  color: #0181b0;
-  margin-right: 15px;
+    color: #0181b0;
+    margin-right: 15px;
 }
 
 .forms {
-  margin: 25px 0;
-  font-size: 25px;
-  border: #4a5c6a 2px solid;
-  border-radius: 25px;
-  padding: 25px;
-  height: 70vh;
-  transition: 1.2s all ease;
-  box-shadow: #444 2px 2px 30px;
+    margin: 25px 0;
+    font-size: 25px;
+    border: #4a5c6a 2px solid;
+    border-radius: 25px;
+    padding: 25px;
+    height: 70vh;
+    transition: 1.5s all ease;
+    box-shadow: #444 2px 2px 30px;
+}
+
+.height-auto {
+    height: auto;
 }
 
 input,
 textarea {
-  width: 100%;
-  background-color: transparent;
-  border: 1px solid #0181b0;
-  padding: 15px;
-  border-radius: 10px;
-  color: #0181b0;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #0181b0;
+    padding: 15px;
+    border-radius: 10px;
+    color: #0181b0;
 }
 
 button {
-  border-radius: 10px;
+    border-radius: 10px;
 }
 
 input {
-  height: 45px;
+    height: 45px;
 }
 
 textarea {
-  height: 300px;
-  transition: all ease 0.5s;
+    height: 300px;
+    transition: all ease 0.5s;
 }
+
 
 /* .row {
     margin-top: 25px;
   } */
 
 .row .submit {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 button {
-  border: 1px solid #0181b0;
-  background-color: transparent;
-  color: white;
-  width: 45%;
+    border: 1px solid #0181b0;
+    background-color: transparent;
+    color: white;
+    width: 45%;
 }
 
 .input:active {
-  outline: #4a5c6a solid 5px;
+    outline: #4a5c6a solid 5px;
 }
 
-.display-message {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  color: #ccc;
+.display-message,
+.error-message {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #ccc;
+    animation: enter 1500ms forwards;
+}
+
+@keyframes enter {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .error {
-  color: red;
-  font-size: 16px;
-  transition: all ease 0.3s;
+    color: red;
+    font-size: 16px;
+    animation: enter 3000ms forwards;
 }
 
 @media screen and (max-width: 1195px) {
-  textarea {
-    height: 250px;
-  }
+    textarea {
+        height: 250px;
+    }
 }
 
 @media screen and (max-width: 1084px) {
-  .details .items span {
-    display: none;
-  }
-  input,
-  textarea {
-    font-size: 18px;
-  }
-  label {
-    font-size: 18px;
-  }
-  .input {
-    height: 20px;
-  }
-  textarea {
-    height: 150px;
-  }
-  .forms {
-    padding: 15px;
-    margin-top: 15px;
-    height: auto;
-    transition: 1.6s all ease;
-  }
-  .rows {
-    margin-top: 5px;
-  }
-  .details {
-    margin: 5px 0;
-  }
-  .details .items a:first-child {
-    padding-left: none;
-  }
-  .details .items a:last-child {
-    padding-right: none;
-  }
-  .details .items a {
-    padding-left: 20px;
-  }
+    .details .items span {
+        display: none;
+    }
+    input,
+    textarea {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+    .input {
+        height: 20px;
+    }
+    textarea {
+        height: 150px;
+    }
+    .forms {
+        padding: 15px;
+        margin-top: 15px;
+        height: auto;
+        transition: 1.6s all ease;
+    }
+    .rows {
+        margin-top: 5px;
+    }
+    .details {
+        margin: 5px 0;
+    }
+    .details .items a:first-child {
+        padding-left: none;
+    }
+    .details .items a:last-child {
+        padding-right: none;
+    }
+    .details .items a {
+        padding-left: 20px;
+    }
 }

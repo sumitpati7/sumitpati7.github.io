@@ -1,34 +1,66 @@
 header {
-  top: 0;
+    top: 0;
 }
 
 .overlay {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  opacity: 0.5;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.5;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
 }
 
 .loader {
-  border: 5px solid #ccc;
-  border-top: 5px solid #0181b0;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
+    border: 5px solid #ccc;
+    border-top: 5px solid #0181b0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.displayMessage {
+    background-color: red;
+    color: white;
+    font-size: 18px;
+    height: 55px;
+    padding: 5px;
+    text-align: center;
+    width: max-content;
+    top: 75px;
+    left: 40%;
+    position: fixed;
+    opacity: 0.7;
+    animation: slide-up 3000ms forwards;
+    z-index: 3;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
 }

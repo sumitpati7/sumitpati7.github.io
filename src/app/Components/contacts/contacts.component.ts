@@ -16,6 +16,8 @@ export class ContactsComponent {
   emailRequired: boolean = false;
   emailPattern: boolean = false;
   messageError: boolean = false;
+  errorMessage: string = '';
+  error: boolean = false;
   constructor(private router: Router) {}
   contacts = [
     {
@@ -45,12 +47,23 @@ export class ContactsComponent {
 
   submit() {
     if (this.form.valid) {
-      this.isSubmit = true;
-      this.pushService.pushContacts(this.form.value).subscribe((response) => {
-        setTimeout(() => {
-          this.form.reset();
-          this.isSubmit = false;
-        }, 3000);
+      this.pushService.pushContacts(this.form.value).subscribe({
+        next: (response) => {
+          this.isSubmit = true;
+          setTimeout(() => {
+            this.form.reset();
+            this.isSubmit = false;
+          }, 3000);
+        },
+        error: (err) => {
+          this.errorMessage = err.error.error;
+          this.error = true;
+          setTimeout(() => {
+            this.form.reset();
+            this.error = false;
+            this.isSubmit = false;
+          }, 3000);
+        },
       });
     } else {
       if (this.form.get('name')?.invalid) {

@@ -12,7 +12,7 @@ import { routes } from './routes';
 import { HeadersDirective } from './Directives/Headers/headers.directive';
 import { ContactsComponent } from './Components/contacts/contacts.component';
 import { AddSkillComponent } from './Components/add-skill/add-skill.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -36,7 +36,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
