@@ -65,27 +65,6 @@ export class ContactsComponent {
           }, 3000);
         },
       });
-    } else {
-      if (this.form.get('name')?.invalid) {
-        this.nameError = true;
-      }
-      if (this.form.get('email')?.invalid) {
-        if (this.form.get('email')?.errors?.['required']) {
-          this.emailRequired = true;
-        } else {
-          this.emailPattern = true;
-        }
-      }
-      if (this.form.get('message')?.invalid) {
-        this.messageError = true;
-      }
-      setTimeout(() => {
-        this.nameError =
-          this.emailRequired =
-          this.emailPattern =
-          this.messageError =
-            false;
-      }, 3000);
     }
   }
 }

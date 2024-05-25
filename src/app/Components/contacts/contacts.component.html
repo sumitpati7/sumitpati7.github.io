@@ -16,17 +16,17 @@
                                 <label for="name">Name:</label><br />
                                 <input type="text" placeholder="Enter your Name?" formControlName="name" />
                                 <br />
-                                <div class="error" *ngIf="nameError">
+                                <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
                                     *Name cannot be empty!
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <label for="email">Email:</label>
                                 <input type="email" placeholder="Enter your Email?" formControlName="email" />
-                                <div class="error" *ngIf="emailRequired">
+                                <div class="error" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">
                                     *Email cannot be empty!
                                 </div>
-                                <div class="error" *ngIf="emailPattern">
+                                <div class="error" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">
                                     *Invalid email entered. Please re-enter!
                                 </div>
                             </div>
@@ -35,7 +35,9 @@
                             <div class="col-12 col-lg-12">
                                 <label for="message">Message:</label><br />
                                 <textarea name="message" id="message" placeholder="Enter your message for me?" formControlName="message"></textarea>
-                                <div class="error" *ngIf="nameError">
+                                <div class="error" *ngIf="
+                    form.get('message')?.invalid && form.get('message')?.touched
+                  ">
                                     *Please leave some message!
                                 </div>
                             </div>

@@ -119,6 +119,7 @@ button {
     color: red;
     font-size: 16px;
     animation: enter 3000ms forwards;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 1195px) {
