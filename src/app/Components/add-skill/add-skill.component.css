@@ -105,6 +105,10 @@ textarea:focus {
     }
 }
 
+.error {
+    color: red;
+}
+
 .errorMessage {
     background-color: transparent;
     color: red;
@@ -113,6 +117,16 @@ textarea:focus {
     right: 0;
     margin-top: 15px;
     animation: appear 5000ms forwards;
+    min-width: 300px;
+    padding: 0px 15px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 @keyframes appear {
@@ -131,5 +145,12 @@ textarea:focus {
     100% {
         transform: translateX(100%);
         opacity: 0.2;
+    }
+}
+
+@media screen and (max-width: 1084px) {
+    .errorMessage {
+        background-color: rgba(1, 129, 176, 1);
+        z-index: 5;
     }
 }

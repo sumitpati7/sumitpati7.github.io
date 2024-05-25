@@ -1,5 +1,5 @@
 <div class="view-area">
-    <ng-container *ngIf="error">
+    <ng-container *ngIf="errorMessage">
         <div class="errorMessage">
             Error! <br /> {{ errorMessage }}
         </div>
@@ -13,21 +13,21 @@
             <div class="input-box">
                 <label for="sName">Skill Name:</label> <br />
                 <input type="text" id="sName" name="sName" formControlName="title" title="Skill Name" autocomplete="off" />
-                <ng-container *ngIf="form.get('sName')?.invalid && form.get('sName')?.touched">
+                <ng-container *ngIf="form.get('title')?.invalid && form.get('title')?.touched">
                     <div class="error">*This field is required!</div>
                 </ng-container>
             </div>
             <div class="input-box">
                 <label for="sImg">Image Name:</label> <br />
                 <input type="text" id="sImg" name="sImg" title="Skill Image" formControlName="img_url" autocomplete="off" />
-                <ng-container *ngIf="form.get('sImg')?.invalid && form.get('sImg')?.touched">
+                <ng-container *ngIf="form.get('img_url')?.invalid && form.get('img_url')?.touched">
                     <div class="error">*This field is required!</div>
                 </ng-container>
             </div>
             <div class="input-box">
                 <label for="sDescription">Skill Description:</label> <br />
                 <textarea name="sDescription" id="sDescription" cols="36" rows="10" formControlName="desc" title="Skill Description"></textarea>
-                <ng-container *ngIf="form.get('sDesc')?.invalid && form.get('sDesc')?.touched">
+                <ng-container *ngIf="form.get('desc')?.invalid && form.get('desc')?.touched">
                     <div class="error">*This field is required!</div>
                 </ng-container>
             </div>

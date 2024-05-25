@@ -17,7 +17,6 @@ export class AddSkillComponent {
   pushSkill: PushSkillService = inject(PushSkillService);
   loading: boolean = false;
   errorMessage: string | null = null;
-  error: boolean = false;
   submit: boolean = false;
 
   constructor(private formBuilder: FormBuilder) {}
@@ -31,10 +30,8 @@ export class AddSkillComponent {
   }
 
   formSubmit() {
-    console.log(this.form);
-
     this.loading = true;
-    if (this.form.valid) {
+    if (this.form.valid && this.form.touched) {
       this.pushSkill.pushSkill(this.form.value).subscribe({
         next: (response) => {
           this.submit = true;
@@ -45,15 +42,21 @@ export class AddSkillComponent {
           this.form.reset();
         },
         error: (err) => {
-          this.error = true;
-          this.errorMessage = err.error.error;
-          this.loading = false;
+          console.log(err.message);
+          this.errorMessage = err.message;
+          setTimeout(() => {
+            this.loading = false;
+            this.errorMessage = null;
+          }, 5000);
         },
       });
     } else {
+      this.errorMessage = 'Please fill out the form first!';
+
       setTimeout(() => {
         this.loading = false;
-      }, 3000);
+        this.errorMessage = null;
+      }, 5000);
     }
   }
 }
