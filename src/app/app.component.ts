@@ -34,4 +34,14 @@ export class AppComponent {
       }
     });
   }
+
+  errorMessage() {
+    var string;
+    if (this.item_details.errorMessage.status === 0) {
+      string = 'Connection to the database is interrupted';
+    } else {
+      string = this.item_details.errorMessage.error.error;
+    }
+    return string;
+  }
 }

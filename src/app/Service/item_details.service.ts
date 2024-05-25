@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../Components/skills/itemClass';
-import { Observable, catchError, map } from 'rxjs';
+import { throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -26,23 +27,13 @@ export class ItemService {
           }
           return users;
         }),
-        catchError(
-          (
-            err: HttpErrorResponse,
-            caught: Observable<
-              { id: string; title: string; img_url: string; desc: string }[]
-            >
-          ) => {
-            console.log(err.error.error);
-            this.errorMessage = err.error.error;
-            this.displayMessage = true;
-            setTimeout(() => {
-              this.routes.navigate(['/Home']);
-              this.displayMessage = false;
-            }, 3000);
-            return caught;
-          }
-        )
+        catchError((err) => {
+          this.errorMessage = err;
+          setTimeout(() => {
+            this.errorMessage = null;
+          }, 5000);
+          return throwError(() => err);
+        })
       );
   }
 }

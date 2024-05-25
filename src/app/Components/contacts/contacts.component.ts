@@ -32,7 +32,7 @@ export class ContactsComponent {
     },
     {
       logo: 'fa-solid fa-location-dot',
-      icon: 'https://maps.google.com',
+      link: 'https://maps.app.goo.gl/uukcfVEgLK9iVByR7',
       name: 'Bhaktapur, Nepal',
     },
   ];
