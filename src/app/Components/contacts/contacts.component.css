@@ -43,7 +43,6 @@ label {
     border: #4a5c6a 2px solid;
     border-radius: 25px;
     padding: 25px;
-    height: 70vh;
     transition: 1.5s all ease;
     box-shadow: #444 2px 2px 30px;
 }
@@ -147,7 +146,7 @@ button {
     }
     .forms {
         padding: 15px;
-        margin-top: 15px;
+        margin-top: 25px;
         height: auto;
         transition: 1.6s all ease;
     }
@@ -165,5 +164,8 @@ button {
     }
     .details .items a {
         padding-left: 20px;
+    }
+    .main {
+        margin-top: 0;
     }
 }

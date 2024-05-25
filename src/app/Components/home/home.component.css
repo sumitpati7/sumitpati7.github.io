@@ -2,7 +2,7 @@
     color: #ccc;
 }
 
-.main-container {
+.home-area {
     padding-top: 25px;
     display: flex;
     justify-content: center;
@@ -10,18 +10,18 @@
     height: calc(100vh - 75px);
 }
 
-.main-container .container-fluid {
+.home-area .container-fluid {
     display: grid;
     height: 100%;
     width: 100%;
     align-items: center;
 }
 
-.main-container .container-fluid .row {
+.home-area .container-fluid .row {
     height: 80vh;
 }
 
-.main-container .container-fluid .right {
+.home-area .container-fluid .right {
     float: right;
     height: 100%;
     background: url("../../../assets/image/20200807221711_IMG_0779.JPG") no-repeat;
@@ -29,7 +29,7 @@
     border-radius: 25px;
 }
 
-.main-container .container-fluid .left {
+.home-area .container-fluid .left {
     float: left;
     height: 100%;
     font-size: 45px;
@@ -39,17 +39,17 @@
     padding: 15px;
 }
 
-.main-container .container-fluid .left .text {
+.home-area .container-fluid .left .text {
     font-weight: 500;
 }
 
-.main-container .container-fluid .left .intro {
+.home-area .container-fluid .left .intro {
     font-size: 75px;
     margin: 0;
     padding: 0;
 }
 
-.main-container .container-fluid .left .intro .name {
+.home-area .container-fluid .left .intro .name {
     font-weight: 500;
     color: #0181b0;
     border-bottom: #ccc 5px solid;
@@ -57,21 +57,25 @@
     cursor: pointer;
 }
 
-.main-container .container-fluid .left .intro .name:hover {
+.home-area .container-fluid .left .intro .name:hover {
     color: #ccc;
     border-bottom: #0181b0 5px solid;
 }
 
-.main-container .container-fluid .left .text .job {
+.home-area .container-fluid .left .text .job {
     font-weight: 100;
 }
 
-.main-container .container-fluid .left .buttons {
+.home-area .container-fluid .left .buttons {
     display: flex;
     gap: 45px;
 }
 
-.main-container .container-fluid .left .buttons button {
+.home-area {
+    padding-top: 0;
+}
+
+.home-area .container-fluid .left .buttons button {
     font-size: 25px;
     border-radius: 15px;
     background-color: #0181b0;
@@ -81,18 +85,36 @@
     display: inline;
 }
 
-.main-container .container-fluid .left .buttons button:hover {
+.home-area .container-fluid .left .buttons button:hover {
     background-color: transparent;
     transition: all 0.3s ease-in-out;
     border: 1px solid #0181b0;
 }
 
+.main-container .about-me {
+    height: 100dvh;
+    /* border-top: #333 2px solid; */
+}
+
+.main-container .about-me .border-line {
+    border-top: #555 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.main-container .about-me .border-line .about-me-container {
+    height: 90%;
+}
+
 @media screen and (max-width: 1084px) {
-    .main-container .container-fluid .right {
+    .home-area .container-fluid .right {
         display: none;
         width: 0;
     }
-    .main-container .container-fluid .left {
+    .home-area .container-fluid .left {
         width: 100%;
         background-image: url("../../../assets/image/20200807221711_IMG_0779.JPG");
         background-size: cover;
@@ -100,15 +122,15 @@
         font-size: 25px;
         border-radius: 25px;
     }
-    .main-container .container-fluid .left .text .intro {
+    .home-area .container-fluid .left .text .intro {
         font-size: 40px;
     }
-    .main-container .container-fluid .left .buttons button {
+    .home-area .container-fluid .left .buttons button {
         font-size: 16px;
         padding: 5px;
         height: 45px;
     }
-    .main-container .container-fluid .row {
+    .home-area .container-fluid .row {
         height: 85vh;
     }
 }
