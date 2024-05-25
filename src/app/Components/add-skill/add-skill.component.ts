@@ -6,6 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { PushSkillService } from '../../Service/push-skill.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-skill',
@@ -16,6 +17,7 @@ export class AddSkillComponent {
   form!: FormGroup;
   pushSkill: PushSkillService = inject(PushSkillService);
   loading: boolean = false;
+  error: HttpErrorResponse | null = null;
   errorMessage: string | null = null;
   submit: boolean = false;
 
@@ -42,8 +44,8 @@ export class AddSkillComponent {
           this.form.reset();
         },
         error: (err) => {
-          console.log(err.message);
-          this.errorMessage = err.message;
+          this.error = err;
+          this.errorMessage = err.error.error;
           setTimeout(() => {
             this.loading = false;
             this.errorMessage = null;

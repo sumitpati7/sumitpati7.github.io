@@ -1,7 +1,7 @@
 <div class="view-area">
     <ng-container *ngIf="errorMessage">
         <div class="errorMessage">
-            Error! <br /> {{ errorMessage }}
+            Error {{ error?.status }}! <br /> {{ errorMessage }}
         </div>
     </ng-container>
     <ng-container *ngIf="submit">
