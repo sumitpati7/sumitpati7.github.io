@@ -1,21 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Item } from '../models/itemClass';
-import { throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Project } from '../models/projectClass';
+import { catchError, map, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ItemService {
-  displayMessage: boolean = false;
-  errorMessage: any;
-  constructor(private http: HttpClient, private routes: Router) {}
+export class ProjectService {
+  openDetails: boolean = false;
+  private errorMessage!: string | null;
+  constructor(private http: HttpClient) {}
 
-  getallCourses() {
+  getallProjects() {
     return this.http
-      .get<{ [key: string]: Item }>(
+      .get<{ [key: string]: Project }>(
         'https://sumitpati7-83579-default-rtdb.firebaseio.com/courses.json'
       )
       .pipe(

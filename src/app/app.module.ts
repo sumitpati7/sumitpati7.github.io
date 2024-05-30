@@ -15,6 +15,9 @@ import { AddSkillComponent } from './Components/add-skill/add-skill.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ProjectComponent } from './Components/project/project.component';
+import { ProjectCardComponent } from './Components/project-card/project-card.component';
+import { ProjectInfoComponent } from './Components/project-info/project-info.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { CommonModule } from '@angular/common';
     HeadersDirective,
     ContactsComponent,
     AddSkillComponent,
+    ProjectComponent,
+    ProjectCardComponent,
+    ProjectInfoComponent,
   ],
   imports: [
     BrowserModule,

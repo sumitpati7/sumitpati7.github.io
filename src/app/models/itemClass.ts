@@ -1,5 +1,5 @@
 import { inject } from '@angular/core';
-import { ItemService } from '../../Service/item_details.service';
+import { ItemService } from '../Service/item_details.service';
 
 export class Item {
   constructor(
