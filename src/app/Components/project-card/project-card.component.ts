@@ -11,6 +11,5 @@ export class ProjectCardComponent {
 
   openDetails() {
     this.service.openDetails = true;
-    console.log('Open Details Clicked!');
   }
 }

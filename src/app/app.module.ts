@@ -18,6 +18,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './Components/project/project.component';
 import { ProjectCardComponent } from './Components/project-card/project-card.component';
 import { ProjectInfoComponent } from './Components/project-info/project-info.component';
+import { DisplayDirective } from './Directives/Display/display.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ProjectInfoComponent } from './Components/project-info/project-info.com
     ProjectComponent,
     ProjectCardComponent,
     ProjectInfoComponent,
+    DisplayDirective,
   ],
   imports: [
     BrowserModule,

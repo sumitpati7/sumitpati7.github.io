@@ -3,10 +3,11 @@
     width: 100%;
     background-color: rgba(2, 13, 23, 0.75);
     position: fixed;
-    top: 35px;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .box {
@@ -17,11 +18,14 @@
     border-radius: 15px;
     padding: 25px;
     color: aliceblue;
-    animation: appear 500ms forwards;
 }
 
 .appear {
-    animation: appear 500ms forwards;
+    animation: appear 500ms forwards !important;
+}
+
+.disappear {
+    animation: disappear 500ms backwards !important;
 }
 
 .box .title {
@@ -41,21 +45,21 @@
 @keyframes appear {
     from {
         opacity: 0;
-        transform: scale(0);
+        transform: translateX(-15%);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateX(0%);
     }
 }
 
 @keyframes disappear {
-    to {
-        opacity: 0;
-        transform: scale(0);
-    }
     from {
         opacity: 1;
-        transform: scale(1);
+        transform: translateX(0%);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(15%);
     }
 }
