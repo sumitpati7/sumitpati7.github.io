@@ -16,6 +16,6 @@ export class ProjectComponent {
   constructor(private routed: ActivatedRoute) {}
   ngOnInit() {
     this.imported_array = this.routed.snapshot.data['projects'];
-    console.log(this.imported_array);
+    this.service.openDetails = false;
   }
 }

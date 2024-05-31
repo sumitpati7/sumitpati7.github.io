@@ -12,10 +12,6 @@ export class ProjectCardComponent {
 
   service = inject(ProjectService);
 
-  ngOnInit() {
-    console.log(this.import);
-  }
-
   openDetails() {
     this.service.selectedTask = this.import;
     this.service.openDetails = true;
