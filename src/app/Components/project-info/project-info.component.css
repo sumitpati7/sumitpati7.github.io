@@ -18,6 +18,10 @@
     border-radius: 15px;
     padding: 25px;
     color: aliceblue;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: #ccc;
 }
 
 .appear {
@@ -62,4 +66,13 @@
         opacity: 0;
         transform: translateX(15%);
     }
+}
+
+.overlay .box img {
+    width: 100%;
+}
+
+.button-carousel {
+    background-color: #ccc !important;
+    z-index: 5;
 }

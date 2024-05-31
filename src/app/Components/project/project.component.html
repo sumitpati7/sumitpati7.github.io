@@ -2,6 +2,6 @@
 <div class="container">
     <p Headers>Projects</p>
     <div class="project-container">
-        <app-project-card></app-project-card>
+        <app-project-card [import]="project" *ngFor="let project of imported_array"></app-project-card>
     </div>
 </div>

@@ -5,7 +5,7 @@ import { ProjectService } from '../Service/project.service';
 export class Project {
   constructor(
     public title: string,
-    public img_url: string,
+    public img_url: string[],
     public desc: string,
     public id?: string
   ) {}

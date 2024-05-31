@@ -2,6 +2,41 @@
     <div class="box" appDisplay id="box">
         <button (click)="closeInfo()">
       <i class="fa-solid fa-arrow-left"></i></button
-    ><span class="title">Title</span>
-  </div>
+    ><span class="title">{{ service.selectedTask.title }}</span>
+    <div class="img">
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            [ngClass]="i === 0 ? 'active' : ''"
+            *ngFor="let img of service.selectedTask.img_url; let i = index"
+          >
+            <img [src]="img" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<span Headers style="font-size: 25px !important">{{
+      service.selectedTask.title
+    }}</span>
+<div class="desc" style="font-size: 20px" [innerHTML]="service.selectedTask.desc"></div>
+</div>
 </div>

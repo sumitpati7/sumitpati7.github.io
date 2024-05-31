@@ -15,7 +15,7 @@ export class ProjectComponent {
   openProject = false;
   constructor(private routed: ActivatedRoute) {}
   ngOnInit() {
-    this.imported_array = this.routed.snapshot.data['items'];
-    // this.imported_array.sort((a, b) => a.title.localeCompare(b.title));
+    this.imported_array = this.routed.snapshot.data['projects'];
+    console.log(this.imported_array);
   }
 }
