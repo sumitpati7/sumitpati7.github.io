@@ -1,7 +1,0 @@
-<app-project-info *ngIf="service.openDetails"></app-project-info>
-<div class="container">
-    <p Headers>Projects</p>
-    <div class="project-container">
-        <app-project-card [import]="project" *ngFor="let project of imported_array" [title]="project.title + ' Click for more Details'"></app-project-card>
-    </div>
-</div>
