@@ -1,5 +1,5 @@
 import React from 'react';
-import { SquareTerminal } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 export const Navbar = () => {
   const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Experience', 'Contact'];
@@ -10,7 +10,7 @@ export const Navbar = () => {
       <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent opacity-50"></div>
 
       <div className="flex items-center gap-3 cursor-pointer group z-10">
-        <SquareTerminal className="w-7 h-7 text-[#38bdf8] group-hover:text-blue-400 transition-colors" strokeWidth={2.5} />
+        <Terminal className="w-7 h-7 text-[#38bdf8] group-hover:text-blue-400 transition-colors" strokeWidth={2.5} />
         <span className="text-white font-bold text-xl tracking-tight">Sumit Pati</span>
       </div>
 
