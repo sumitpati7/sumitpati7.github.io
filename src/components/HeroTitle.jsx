@@ -12,8 +12,8 @@ function HeroTitle() {
           <span className="text-white transition-colors duration-300 group-hover:text-primary">Sumit</span>{" "}
           <span className="text-primary transition-colors duration-300 group-hover:text-white">Pati</span>
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium">
-          Associate Software Engineer | Full Stack Developer
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium block sm:flex">
+          <div className="text-center">Associate Software Engineer</div> <span className="hidden px-2 sm:inline">|</span> <div className="text-center">Full Stack Developer</div>
         </p>
         <p className="text-base sm:text-lg text-gray-500 text-center max-w-xl">
           Building end-to-end solutions with modern technologies
