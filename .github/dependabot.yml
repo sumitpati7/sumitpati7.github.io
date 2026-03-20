@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "monthly"
       day: "sunday"
-    open-pull-request-limit: 10
+    open-pull-requests-limit: 10
     labels:
       - "dependencies"
       - "github-actions"
@@ -17,7 +17,7 @@ updates:
     schedule:
       interval: "monthly"
       day: "sunday"
-    open-pull-request-limit: 5
+    open-pull-requests-limit: 5
     labels:
       - "dependencies"
       - "npm"
