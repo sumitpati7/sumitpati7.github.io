@@ -3,43 +3,48 @@ function OverView() {
     <section id="about" className="min-h-[calc(100vh-74px)] flex items-center justify-center">
       <div className="flex rounded-4xl">
         <div className="left rounded-4xl p-4 mr-16">
-          <svg width="460" height="420" viewBox="0 0 460 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="420" height="420" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+
             <defs>
-              <linearGradient id="bg" x1="0" y1="0" x2="460" y2="220">
-                <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.15"/>
-                <stop offset="100%" stop-color="#22c55e" stop-opacity="0.15"/>
+              <linearGradient id="grad1" x1="0" y1="0" x2="420" y2="320">
+                <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#22c55e" stop-opacity="0.2"/>
               </linearGradient>
 
               <filter id="glow">
-                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
                 <feMerge>
-                  <feMergeNode in="blur"/>
+                  <feMergeNode in="coloredBlur"/>
                   <feMergeNode in="SourceGraphic"/>
                 </feMerge>
               </filter>
             </defs>
 
-            <rect width="460" height="220" rx="16" fill="url(#bg)" />
-            <rect x="30" y="70" width="110" height="80" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
-            <text x="45" y="60" fill="#38bdf8" font-size="12" font-family="monospace">Frontend</text>
-            <rect x="45" y="95" width="80" height="10" rx="3" fill="#1e293b"/>
-            <rect x="45" y="110" width="50" height="10" rx="3" fill="#1e293b"/>
-            <rect x="175" y="60" width="110" height="100" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
-            <text x="195" y="50" fill="#22c55e" font-size="12" font-family="monospace">Backend</text>
-            <rect x="195" y="90" width="70" height="10" rx="3" fill="#1e293b"/>
-            <rect x="195" y="105" width="70" height="10" rx="3" fill="#1e293b"/>
-            <rect x="195" y="120" width="70" height="10" rx="3" fill="#1e293b"/>
-            <ellipse cx="380" cy="90" rx="45" ry="15" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-            <rect x="335" y="90" width="90" height="50" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-            <ellipse cx="380" cy="140" rx="45" ry="15" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
-            <text x="350" y="55" fill="#a78bfa" font-size="12" font-family="monospace">Database</text>
-            <line x1="140" y1="110" x2="175" y2="110" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)" filter="url(#glow)"/>
-            <line x1="285" y1="110" x2="335" y2="110" stroke="#22c55e" stroke-width="2" marker-end="url(#arrow)" filter="url(#glow)"/>
-            <defs>
-              <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8"/>
-              </marker>
-            </defs>
+            <rect width="420" height="320" rx="20" fill="url(#grad1)" />
+
+            <rect x="40" y="60" width="120" height="90" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+            <circle cx="55" cy="75" r="4" fill="#38bdf8"/>
+            <circle cx="70" cy="75" r="4" fill="#38bdf8"/>
+            <circle cx="85" cy="75" r="4" fill="#38bdf8"/>
+            <rect x="55" y="95" width="90" height="10" rx="3" fill="#1e293b"/>
+            <rect x="55" y="110" width="60" height="10" rx="3" fill="#1e293b"/>
+
+            <rect x="260" y="50" width="120" height="110" rx="10" fill="#0f172a" stroke="#22c55e" stroke-width="2"/>
+            <rect x="280" y="70" width="80" height="12" rx="4" fill="#1e293b"/>
+            <rect x="280" y="90" width="80" height="12" rx="4" fill="#1e293b"/>
+            <rect x="280" y="110" width="80" height="12" rx="4" fill="#1e293b"/>
+
+            <ellipse cx="210" cy="230" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+            <rect x="150" y="210" width="120" height="40" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+            <ellipse cx="210" cy="210" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" stroke-width="2"/>
+
+            <line x1="160" y1="105" x2="260" y2="105" stroke="#38bdf8" stroke-width="2" filter="url(#glow)" stroke-dasharray="5,5"/>
+
+            <line x1="320" y1="160" x2="240" y2="210" stroke="#22c55e" stroke-width="2" filter="url(#glow)" stroke-dasharray="5,5"/>
+
+            <text x="60" y="50" fill="#38bdf8" font-size="12" font-family="monospace">Frontend</text>
+            <text x="280" y="40" fill="#22c55e" font-size="12" font-family="monospace">Backend</text>
+            <text x="175" y="270" fill="#a78bfa" font-size="12" font-family="monospace">Database</text>
 
           </svg>
         </div>
