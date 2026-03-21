@@ -27,32 +27,40 @@ function OverView() {
             <g transform="translate(0, 40)">
 
               {/* Frontend */}
-              <rect x="40" y="60" width="120" height="90" rx="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2"/>
-              <circle cx="55" cy="75" r="4" fill="#38bdf8"/>
-              <circle cx="70" cy="75" r="4" fill="#38bdf8"/>
-              <circle cx="85" cy="75" r="4" fill="#38bdf8"/>
-              <rect x="55" y="95" width="90" height="10" rx="3" fill="#1e293b"/>
-              <rect x="55" y="110" width="60" height="10" rx="3" fill="#1e293b"/>
+              <g className="anim-frontend">
+                <rect x="40" y="60" width="120" height="90" rx="10" fill="#0f172a" stroke="#38bdf8" strokeWidth="2"/>
+                <circle cx="55" cy="75" r="4" fill="#38bdf8"/>
+                <circle cx="70" cy="75" r="4" fill="#38bdf8"/>
+                <circle cx="85" cy="75" r="4" fill="#38bdf8"/>
+                <rect x="55" y="95" width="90" height="10" rx="3" fill="#1e293b"/>
+                <rect x="55" y="110" width="60" height="10" rx="3" fill="#1e293b"/>
+                <text x="60" y="50" fill="#38bdf8" fontSize="12" fontFamily="monospace">Frontend</text>
+              </g>
 
               {/* Backend */}
-              <rect x="260" y="50" width="120" height="110" rx="10" fill="#0f172a" stroke="#22c55e" strokeWidth="2"/>
-              <rect x="280" y="70" width="80" height="12" rx="4" fill="#1e293b"/>
-              <rect x="280" y="90" width="80" height="12" rx="4" fill="#1e293b"/>
-              <rect x="280" y="110" width="80" height="12" rx="4" fill="#1e293b"/>
+              <g className="anim-backend">
+                <rect x="260" y="50" width="120" height="110" rx="10" fill="#0f172a" stroke="#22c55e" strokeWidth="2"/>
+                <rect x="280" y="70" width="80" height="12" rx="4" fill="#1e293b"/>
+                <rect x="280" y="90" width="80" height="12" rx="4" fill="#1e293b"/>
+                <rect x="280" y="110" width="80" height="12" rx="4" fill="#1e293b"/>
+                <text x="280" y="40" fill="#22c55e" fontSize="12" fontFamily="monospace">Backend</text>
+              </g>
 
               {/* Database */}
-              <ellipse cx="210" cy="230" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
-              <rect x="150" y="210" width="120" height="40" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
-              <ellipse cx="210" cy="210" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
+              <g className="anim-database">
+                <ellipse cx="210" cy="230" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
+                <rect x="150" y="210" width="120" height="40" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
+                <ellipse cx="210" cy="210" rx="60" ry="20" fill="#0f172a" stroke="#a78bfa" strokeWidth="2"/>
+                <text x="175" y="270" fill="#a78bfa" fontSize="12" fontFamily="monospace">Database</text>
+              </g>
 
               {/* Connections */}
-              <line x1="160" y1="105" x2="260" y2="105" stroke="#38bdf8" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
-              <line x1="320" y1="160" x2="240" y2="210" stroke="#22c55e" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
-
-              {/* Labels */}
-              <text x="60" y="50" fill="#38bdf8" fontSize="12" fontFamily="monospace">Frontend</text>
-              <text x="280" y="40" fill="#22c55e" fontSize="12" fontFamily="monospace">Backend</text>
-              <text x="175" y="270" fill="#a78bfa" fontSize="12" fontFamily="monospace">Database</text>
+              <g className="anim-backend">
+                <line x1="160" y1="105" x2="260" y2="105" stroke="#38bdf8" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
+              </g>
+              <g className="anim-database">
+                <line x1="320" y1="160" x2="240" y2="210" stroke="#22c55e" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
+              </g>
             </g>
           </svg>
         </div>
