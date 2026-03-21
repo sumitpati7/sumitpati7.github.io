@@ -67,13 +67,13 @@ function OverView() {
         <div className="right max-w-xl lg:max-w-160 flex flex-col gap-4 text-center lg:text-left">
           <p className="uppercase tracking-widest text-primary text-lg sm:text-xl font-medium">the developer</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading">Building end-to-end solutions for modern web apps</h2>
-          <p className="text-body text-shadow-primary text-shadow-2xs">
+          <p className="text-body text-shadow-primary ">
             Versatile full stack developer focused on crafting seamless experiences across both frontend and backend. I specialize in building scalable applications, designing efficient APIs, and delivering intuitive, high-performance user interfaces.
           </p>
-          <p className="text-body text-shadow-primary text-shadow-2xs">
+          <p className="text-body text-shadow-primary ">
             I thrive on turning complex ideas into elegant, functional products—ensuring everything from data flow to user interaction is fast, secure, and reliable.
           </p>
-          <p className="text-body text-shadow-primary text-shadow-2xs">
+          <p className="text-body text-shadow-primary ">
             Passionate about modern technologies, I build clean, maintainable systems that balance performance with great user experience.
           </p>
         </div>
