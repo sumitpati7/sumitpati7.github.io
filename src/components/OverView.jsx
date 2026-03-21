@@ -56,7 +56,7 @@ function OverView() {
             </g>
           </svg>
         </div>
-        <div className="right max-w-[36rem] lg:max-w-[40rem] flex flex-col gap-4 text-center lg:text-left">
+        <div className="right max-w-xl lg:max-w-160 flex flex-col gap-4 text-center lg:text-left">
           <p className="uppercase tracking-widest text-primary text-lg sm:text-xl font-medium">the developer</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-heading">Building end-to-end solutions for modern web apps</h2>
           <p className="text-body text-shadow-primary text-shadow-2xs">
