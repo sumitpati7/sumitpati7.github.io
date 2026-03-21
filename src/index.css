@@ -12,3 +12,41 @@
 
   --color-divider: #1e293b;
 }
+
+@keyframes fadeFrontend {
+  0% { opacity: 0; }
+  12.5% { opacity: 1; }
+  75% { opacity: 1; }
+  87.5%, 100% { opacity: 0; }
+}
+
+@keyframes fadeBackend {
+  0%, 33% { opacity: 0; }
+  50%, 75% { opacity: 1; }
+  87.5%, 100% { opacity: 0; }
+}
+
+@keyframes fadeDatabase {
+  0%, 50% { opacity: 0; }
+  66%, 75% { opacity: 1; }
+  87.5%, 100% { opacity: 0; }
+}
+
+.anim-frontend { animation: fadeFrontend 8s ease-in-out infinite; }
+.anim-backend { animation: fadeBackend 8s ease-in-out infinite; }
+.anim-database { animation: fadeDatabase 8s ease-in-out infinite; }
+
+svg:hover .anim-frontend,
+svg:hover .anim-backend,
+svg:hover .anim-database {
+  animation: none !important;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  transition-delay: 1s;
+}
+
+svg .anim-frontend,
+svg .anim-backend,
+svg .anim-database {
+  transition: opacity 0.3s ease;
+}

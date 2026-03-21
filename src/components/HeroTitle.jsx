@@ -2,7 +2,7 @@ import { Dot } from "lucide-react";
 
 function HeroTitle() {
   return (
-    <section className="flex justify-center items-center h-full min-h-[calc(100vh-74px)]">
+    <section id="home" className="flex justify-center items-center h-full min-h-[calc(100vh-74px)]">
       <div className="flex flex-col items-center gap-4">
         <p className="p-2 capitalize text-primary border-primary border bg-transparent rounded-3xl text-center inline-flex items-center justify-center gap-1 font-medium">
           <Dot className="text-5xl" />

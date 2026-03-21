@@ -1,5 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import HeroTitle from "./components/HeroTitle";
+import OverView from "./components/OverView";
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <div className="min-h-[calc(100vh-74px)] w-full px-6">
         <div className="container mx-auto">
           <HeroTitle />
+          <OverView />
         </div>
       </div>
     </main>
