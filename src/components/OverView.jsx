@@ -1,6 +1,6 @@
 function OverView() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-4 py-8">
+    <section id="about" className="min-h-[calc(100vh-74px)] flex items-center justify-center px-4 py-8">
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16 rounded-4xl">
         <div className="left rounded-4xl p-4 lg:mr-16 shrink-0">
           <svg className="w-70 h-70 sm:w-87.5 sm:h-87.5 md:w-105 md:h-105" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
