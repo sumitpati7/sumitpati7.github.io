@@ -55,12 +55,8 @@ function OverView() {
               </g>
 
               {/* Connections */}
-              <g className="anim-backend">
-                <line x1="160" y1="105" x2="260" y2="105" stroke="#38bdf8" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
-              </g>
-              <g className="anim-database">
-                <line x1="320" y1="160" x2="240" y2="210" stroke="#22c55e" strokeWidth="2" filter="url(#glow)" strokeDasharray="5,5"/>
-              </g>
+              <line className="anim-backend" x1="160" y1="105" x2="260" y2="105" stroke="#38bdf8" strokeWidth="2" strokeDasharray="8,4"/>
+              <line className="anim-database" x1="320" y1="160" x2="240" y2="210" stroke="#22c55e" strokeWidth="2" strokeDasharray="8,4"/>
             </g>
           </svg>
         </div>
